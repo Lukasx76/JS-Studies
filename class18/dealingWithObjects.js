@@ -14,3 +14,17 @@ const person = {
         console.log(`${this.personName} was born in ${this.birthdayDate}.`)
     }
 };
+
+// factory to create objects
+
+function objectFactory(personName, age, hobbies){
+    return {
+        personName : personName,
+        personAge : age,
+        hobbiesList : hobbies
+    }
+};
+
+let person2 = objectFactory("Peter", 22, ["read", "run", "study"]);
+console.log(person2.hobbiesList);
+
