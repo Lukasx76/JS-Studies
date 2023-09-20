@@ -30,7 +30,7 @@ function calculateBmi(){
             output.innerHTML = `<p>Seu IMC É ${bmiResult} (Obesidade grau 3)</p>`;
         }
         else {
-            output.innerHTML = `<p>Peso inválido</p>`;
+            output.innerHTML = `<p>Dado(s) inválidos</p>`;
         }
     }
 
