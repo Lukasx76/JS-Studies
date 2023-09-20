@@ -4,7 +4,7 @@ function getDate(){
     const date = new Date();
     const year = date.getFullYear();
     const month = date.getMonth();
-    const day = date.getDay();
+    const day = date.getDate();
     const hour = date.getUTCHours();
     const minute = date.getMinutes();
     const second = date.getSeconds();
