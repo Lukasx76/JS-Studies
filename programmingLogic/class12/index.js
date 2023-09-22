@@ -13,4 +13,5 @@ const { personName, personSurname } = person;
 
 // getting nested values from the object, and attribuiting different names to it
 const { address: { avenue: anotherName, number: anotherNumber } } = person
+
 console.log(anotherName, anotherNumber)
