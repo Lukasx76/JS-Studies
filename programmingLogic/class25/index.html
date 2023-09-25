@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display time</title>
+</head>
+<body>
+    <h1>JavaScript hour display</h1>
+    <p>A simple function to display date</p>
+    <p id="date-paragraph"></p>
+    
+    <script>
+
+        setInterval(displayDate, 1000);
+
+        function displayDate(){
+            const date = new Date()
+            document.getElementById("date-paragraph").innerHTML = date.toLocaleTimeString("pt-BR",
+            {hour12: false})
+        }
+
+    </script>
+</body>
+</html>
