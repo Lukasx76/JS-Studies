@@ -1,9 +1,9 @@
 function getHoursAndMinute(date) {
+    if (date && !(date instanceof Date)) {
+        throw("Expecting a Date object");
+    }
     if (!date){
         date = new Date()
-    }
-    if (!(date instanceof Date)) {
-        throw("Expecting a Date object");
     }
 
     return date.toLocaleTimeString("pt-BR", {
