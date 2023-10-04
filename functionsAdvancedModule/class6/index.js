@@ -1,0 +1,1 @@
+/*Callback functions: callback functions are used to control the flow of how functions are called. This approach characterizes asynchronous programing.*/
