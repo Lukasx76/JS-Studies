@@ -57,7 +57,7 @@ form button:hover {
   background: var(--primary-color-darker);
 }
 
-.calc td {
+.calc:not(.display) td  {
   background: #137070;
   min-width: 80px;
   text-align: center;
@@ -65,9 +65,4 @@ form button:hover {
 
 .calc td:hover {
   cursor: default;
-}
-
-.display {
-  background-color: rgb(16, 104, 104);
-  border: 1px solid #000;
 }
