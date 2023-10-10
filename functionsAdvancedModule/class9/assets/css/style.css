@@ -64,5 +64,5 @@ form button:hover {
 }
 
 .calc td:hover {
-  cursor: default;
+  cursor: pointer;
 }
