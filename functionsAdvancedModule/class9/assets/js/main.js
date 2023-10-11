@@ -6,27 +6,38 @@
     display.innerText = "";
   }
 
+  function deleteLastNumber(arr) {
+    const nodeSpan = display.querySelectorAll("span");
+    
+    const spanArr = []
+    for (let span of nodeSpan) {
+      let spanText = span.innerText;
+      spanArr.push(spanText);
+    }
+    console.log(spanArr)
+  }
+
   function addOperatorsToDisplay(operator){
     if (operator === "/") {
-      display.innerText += "/";
+      display.innerHTML += `<span>/</span>`;
     }
     if (operator === "+") {
-      display.innerText += "+";
+      display.innerHTML += `<span>+</span>`;
     }
     if (operator === "*") {
-      display.innerText += "*";
+      display.innerHTML += `<span>*</span>`;
     }
     if (operator === "-") {
-      display.innerText += "-";
+      display.innerHTML += `<span>-</span>`;
     }
     if (operator === "(") {
-      display.innerText += "(";
+      display.innerHTML += `<span>(</span>`;
     }
     if (operator === ")") {
-      display.innerText += ")";
+      display.innerHTML += `<span>)</span>`;
     }
     if (operator === ".") {
-      display.innerText += ".";
+      display.innerHTML += `<span>.</span>`;
     }
   }
 
@@ -36,31 +47,31 @@
     }
 
     if (number === "1") {
-      display.innerHTML += `<span>${1}</span>`
+      display.innerHTML += `<span>1</span>`
     }
     if (number === "2") {
-      display.innerHTML += `<span>${2}</span>`
+      display.innerHTML += `<span>2</span>`
     }
     if (number === "3") {
-      display.innerHTML += `<span>${3}</span>`
+      display.innerHTML += `<span>3</span>`
     }
     if (number === "4") {
-      display.innerHTML += `<span>${4}</span>`
+      display.innerHTML += `<span>4</span>`
     }
     if (number === "5") {
-      display.innerHTML += `<span>${5}</span>`
+      display.innerHTML += `<span>5</span>`
     }
     if (number === "6") {
-      display.innerHTML += `<span>${6}</span>`
+      display.innerHTML += `<span>6</span>`
     }
     if (number === "7") {
-      display.innerHTML += `<span>${7}</span>`
+      display.innerHTML += `<span>7</span>`
     }
     if (number === "8") {
-      display.innerHTML += `<span>${8}</span>`
+      display.innerHTML += `<span>8</span>`
     }
     if (number === "9") {
-      display.innerHTML += `<span>${9}</span>`
+      display.innerHTML += `<span>9</span>`
     }
   }
 
@@ -68,10 +79,8 @@
     const element = e.target
     addNumberToDisplay(element.innerText);
     addOperatorsToDisplay(element.innerText);
+    deleteLastNumber();
 
-    const spanArr = display.querySelectorAll("span");
-  
-    
     console.log(typeof display.innerText);
     if (element.innerText === "C") {
       clearDisplay();
