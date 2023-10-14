@@ -1,6 +1,11 @@
 (function(){
   let display = document.querySelector(".display td");
   const buttons = document.querySelector("tbody");
+  
+  function calculate() {
+    const operation = [display.innerText.split("/")];
+    console.log(operation)
+  }
 
   function displayStartsWithZero() {
     if (display.innerText.startsWith("0")){
@@ -133,6 +138,10 @@
 
     if (element.innerText === "C") {
       clearDisplay();
+    }
+
+    if (element.innerText === "=") {
+      calculate();
     }
 
   })
