@@ -3,8 +3,16 @@
   const buttons = document.querySelector("tbody");
   
   function calculate() {
-    const operation = [display.innerText.split("/")];
-    console.log(operation)
+    const operationToEvaluate = display.innerText;
+    let result;
+
+    try {
+      result = Function("return " + operationToEvaluate)();
+    } catch (error){
+      display.innerHTML = `<span>Invalid expression <span>`;
+    }
+    
+    display.innerHTML = `<span>${result.toFixed(2)}<span>`;
   }
 
   function displayStartsWithZero() {
