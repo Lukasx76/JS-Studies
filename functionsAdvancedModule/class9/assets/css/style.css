@@ -57,12 +57,30 @@ form button:hover {
   background: var(--primary-color-darker);
 }
 
-.calc:not(.display) td  {
-  background: #137070;
-  min-width: 80px;
-  text-align: center;
+.calc {
+  background-color: teal;
 }
 
-.calc td:hover {
+.btn {
+  width: 3rem;
+  height: 4vh;
+  border: none; 
+}
+
+.btn:hover {
   cursor: pointer;
+  background-color: #4169e1;
+}
+
+.equals {
+  background: #ff0000;
+}
+
+.equals:hover {
+  background-color: #6e0a0a;
+}
+
+.display {
+  width: 100%;
+  height: 5vh;
 }
