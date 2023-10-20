@@ -72,3 +72,25 @@ console.log(genFoo.next()); // { value: 1, done: false }
 console.log(genFoo.next()); // { value: 2, done: false }
 console.log(genFoo.next()); // { value: 3, done: false }
 console.log(genFoo.next()); // { value: undefined, done: true }
+
+// Generator that yield numbers 0-10(inclusive)
+
+function* counter(){
+  let i;
+  for (i=0; i<=10; i++){
+    yield i;
+  }
+}
+
+const counterGen = counter();
+console.log(counterGen.next().value);
+console.log(counterGen.next().value);
+console.log(counterGen.next().value);
+console.log(counterGen.next().value);
+console.log(counterGen.next().value);
+console.log(counterGen.next().value);
+console.log(counterGen.next().value);
+console.log(counterGen.next().value);
+console.log(counterGen.next().value);
+console.log(counterGen.next().value);
+console.log(counterGen.next().value);
