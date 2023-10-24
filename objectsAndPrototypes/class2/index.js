@@ -4,7 +4,7 @@ function Product(productName, price, stock) {
 
     // define property
 
-    Object.defineProperty(this, productName, {
+    Object.defineProperty(this, "productName", {
         enumerable: true, // allows the property(keys) to be displayed 
         value: productName, // defines the value of the property
         writable: true, // tells if the property can be reassigned to another value
