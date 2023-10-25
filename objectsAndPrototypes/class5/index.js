@@ -10,9 +10,13 @@ function Person(name, age, ...hobbies) {
     this.hobbies = hobbies;
 }
 
-// adding attribute profession to the Constructor Person using prototype
+Person.prototype.run = function(){
+    console.log(this.name + " is running");
+};
 
-Person.prototype.profession = "Basketball player";
+const p1 = new Person("Nikola jokic", 28, ["watch horse races", "play basketball"]);
+const p2 = new Person("Stephen curry", 35, ["Play golf", "play basketball"]);
 
-const p1 = Person("Nikola jokic", 28, ["watch horse races", "play basketball"])
-const p2 = Person("Stephen curry", 35, ["Play golf", "play basketball"])
+// adding a function to the Constructor Person using prototype
+
+p1.run();
