@@ -12,9 +12,7 @@ function Person(name, age, ...hobbies) {
 
 // adding attribute profession to the Constructor Person using prototype
 
-Person.prototype = "Basketball player";
+Person.prototype.profession = "Basketball player";
 
 const p1 = Person("Nikola jokic", 28, ["watch horse races", "play basketball"])
 const p2 = Person("Stephen curry", 35, ["Play golf", "play basketball"])
-
-console.log(Person.prototype);
