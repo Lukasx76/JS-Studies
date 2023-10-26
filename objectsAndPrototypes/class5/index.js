@@ -9,14 +9,18 @@ function Person(name, age, ...hobbies) {
     this.age = age;
     this.hobbies = hobbies;
 }
+// adding a function to the Constructor Person using prototype
 
 Person.prototype.run = function(){
     console.log(this.name + " is running");
 };
 
-const p1 = new Person("Nikola jokic", 28, ["watch horse races", "play basketball"]);
-const p2 = new Person("Stephen curry", 35, ["Play golf", "play basketball"]);
+// adding an attribute to the Constructor Person using prototype
+Person.prototype.profession = null;
 
-// adding a function to the Constructor Person using prototype
+const p1 = new Person("Nikola jokic", 28, "watch horse races", "play basketball");
+const p2 = new Person("Stephen curry", 35, "Play golf", "play basketball");
 
+p2.profession = "Basketball player"
+console.log(p2)
 p1.run();
