@@ -39,11 +39,5 @@ function Book(name, author, price){
 
 Shirt.prototype.increasePrice = function(value){ this.price = this.price + this.price * (value / 100) }
 
-// 100 , 10 = 110 price + 10 / 100
-
 const p1 = new Shirt("Large", "Cottom", 20);
 const p2 = new Book("48 laws of power", "Robert greene", 10);
-
-console.log(p1)
-p1.increasePrice(50);
-console.log(p1)
