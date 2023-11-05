@@ -13,39 +13,32 @@ primeiro digito = 11 - (237 % 11) = 5
 segundo digito = 11 - (284 % 11) = 5
 */
 
-// 918139880 80
+// 705484450 52
 
-// obter 918139880 e multiplicar por 10,9,8,7...2
-// obter nove primeiros digitos
-// multiplicar por 10,9,8,7...2
-
-const cpf = "91813988080";
+const cpf = "70548445052";
 let cpfCopy = cpf.slice(0, 9);
 let sum = 0;
 let multiplier = 10;
-let firstDigit;
-let secondDigit;
 
-for (let i = 0; i <= 8; i++) {
-    let digit = Number(cpf[i]);
-    sum += digit * multiplier;
-    multiplier -= 1;
+for (let i=0; i < cpfCopy.length; i++) {
+    let digit = cpfCopy[i];
+    sum += Number(digit) * multiplier;
+    multiplier--;
 
-    if (i == 8) {
-        firstDigit = 11 - (sum % 11);
-        cpfCopy = cpfCopy + String(firstDigit);
-        multiplier = 11;
+    if (i === 8) {
+        let firstDigit = 11 - (sum % 11);
+        cpfCopy += String(firstDigit)
         sum = 0;
-        for (let j = 0; j <= 9; j++) {
-            let digit = Number(cpf[j]);
-            sum += digit * multiplier;
-            console.log(digit + "x" + multiplier + "=" + digit * multiplier);
-            multiplier -= 1;
-        
-            if (j == 9) {
-                secondDigit = 11 - (sum % 11);
-                
-                cpfCopy = cpfCopy + String(secondDigit);
+        multiplier = 11;
+
+        for (let j = 0; j < cpfCopy.length; j++) {
+            digit = cpfCopy[j];
+            sum += Number(digit) * multiplier;
+            multiplier--
+
+            if (j === 9) {
+                let secondDigit = 11 - (sum % 11);
+                cpfCopy += String(secondDigit);
             }
         }
     }
