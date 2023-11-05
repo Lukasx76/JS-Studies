@@ -46,3 +46,16 @@ for (let i=0; i < cpfCopy.length; i++) {
         }
     }
 }
+
+// rewriting the code
+
+// remove . and -
+const cpf2 = "973.343.390-02";
+let cleanCpf = cpf2.replace(/\D+/g, "");
+
+let var1 = Array.from(cleanCpf.slice(0,9));
+var1 = var1.map((value)=> Number(value));
+
+let var2 = var1.reduce((accum, value) => {accum--; return accum * value}, 10);
+console.log(var2);
+// reduce the numbers in var1 to the sum of the multiplication between the digits and 10, 9, 8... and so on;
