@@ -7,18 +7,30 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Modelo</title>
   <link rel="stylesheet" href="./assets/css/style.css">
+  <script src="./assets/js/form.js"></script>
 </head>
 
 <body>
 
   <section class="container">
-    <h1>Lorem ipsum dolor sit amet</h1>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-      Repellendus nisi explicabo saepe voluptatibus consequuntur et corporis
-      maxime quos, doloribus vitae voluptatum quisquam necessitatibus
-      pariatur veritatis exercitationem beatae officiis suscipit Ea!
-    </p>
+    <h1>Register form</h1>
+    <ul>
+      <li>No field can be empty</li>
+      <li>User only needs letters or numbers</li>
+      <li>User must have between 3 and 12 characters</li>
+      <li>Password must have between 6 and 12 characters</li>
+    </ul>
+    <form>
+      Name:
+      <input type="text" id="nameInput">
+      Surname:
+      <input type="text" id="surnameInput">
+      CPF:
+      <input type="text" id="cpfInput">
+      User:
+      <input type="text" id="userInput">
+      <button onclick="sendInformation()">Submit</button>
+    </form>
   </section>
 
   <script src="./assets/js/main.js"></script>
