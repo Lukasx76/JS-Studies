@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Modelo</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script src="assets/js/form.js"></script>
+</head>
+
+<body>
+
+  <section class="container">
+    <h1>Register form</h1>
+    <ul>
+      <li>No field can be empty</li>
+      <li>User only needs letters or numbers</li>
+      <li>User must have between 3 and 12 characters</li>
+      <li>Password must have between 6 and 12 characters</li>
+    </ul>
+    <form>
+      Name:
+      <input type="text" id="nameInput" required>
+      Surname:
+      <input type="text" id="surnameInput" required>
+      CPF:
+      <input type="text" id="cpfInput" required>
+      User:
+      <input type="text" id="userInput" required>
+      Password:
+      <input type="password" id="passwordInput" required>
+      Repeat password:
+      <input type="password" id="passwordInput2" required>
+      <input type="button" onclick="sendInformation()" value="Submit"></input>
+    </form>
+  </section>
+
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
